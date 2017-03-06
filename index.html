@@ -26,13 +26,50 @@
     <header>
     	<div class="background">
             <h1 class="title">Cozy Chat</h1>
-            <a href="no.html" class="btn-left">No thanks</a>
-            <a href="yes.html" class="btn-right">I'd love to</a>
+            <a href="no.html" class="btn-left" onClick="writeData(0)"; >No thanks</a>
+            <a href="yes.html" class="btn-right" onClick="writeData(1)">I'd love to</a>
             <h3 class = "subtitle">Guide high schoolers to their dream college</h3>
             <br>
 		</div>
     </header>
 
 </body>
+
+<script src="https://www.gstatic.com/firebasejs/3.6.10/firebase.js"></script>
+<script>
+  // Initialize Firebase
+  // TODO: Replace with your project's customized code snippet
+  var config = {
+    apiKey: "AIzaSyD2UpNn66q09Sy0IwhoHJQMNhUObf8DJQM",
+    authDomain: "landingpage-e0133.firebaseapp.com",
+    databaseURL: "https://landingpage-e0133.firebaseio.com",
+    storageBucket: "landingpage-e0133.appspot.com",
+    messagingSenderId: "793325095961",
+  };
+  firebase.initializeApp(config);
+
+  /**
+ * Saves a new post to the Firebase DB.
+ */
+// [START write_fan_out]
+function writeData(choice) {
+    console.log(choice.toString());
+  var playersRef = firebase.database().ref();
+
+playersRef.set({
+   John: {
+      number: 1,
+      age: 30
+   },
+    
+   Amanda: {
+      number: 2,
+      age: 20
+   }
+});
+}
+
+</script>
+
 
 </html>
