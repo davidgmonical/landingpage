@@ -54,19 +54,9 @@
 // [START write_fan_out]
 function writeData(choice) {
     console.log(choice.toString());
-  var playersRef = firebase.database().ref();
-
-playersRef.set({
-   John: {
-      number: 1,
-      age: 30
-   },
-    
-   Amanda: {
-      number: 2,
-      age: 20
-   }
-});
+    firebase.database().ref().set({
+        numNo: 1
+  });
 }
 
 </script>
