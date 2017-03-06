@@ -17,7 +17,18 @@
     <!-- Custom Fonts -->
     <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
     <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700,300italic,400italic,700italic" rel="stylesheet" type="text/css">
-
+    <script src="https://www.gstatic.com/firebasejs/3.7.0/firebase.js"></script>
+    <script>
+      // Initialize Firebase
+      var config = {
+        apiKey: "AIzaSyD2UpNn66q09Sy0IwhoHJQMNhUObf8DJQM",
+        authDomain: "landingpage-e0133.firebaseapp.com",
+        databaseURL: "https://landingpage-e0133.firebaseio.com",
+        storageBucket: "landingpage-e0133.appspot.com",
+        messagingSenderId: "793325095961"
+      };
+      firebase.initializeApp(config);
+    </script>
 </head>
 
 <body>
@@ -35,19 +46,8 @@
 
 </body>
 
-<script src="https://www.gstatic.com/firebasejs/3.6.10/firebase.js"></script>
-<script>
-  // Initialize Firebase
-  // TODO: Replace with your project's customized code snippet
-  var config = {
-    apiKey: "AIzaSyD2UpNn66q09Sy0IwhoHJQMNhUObf8DJQM",
-    authDomain: "landingpage-e0133.firebaseapp.com",
-    databaseURL: "https://landingpage-e0133.firebaseio.com",
-    storageBucket: "landingpage-e0133.appspot.com",
-    messagingSenderId: "793325095961",
-  };
-  firebase.initializeApp(config);
 
+<script>
   /**
  * Saves a new post to the Firebase DB.
  */
