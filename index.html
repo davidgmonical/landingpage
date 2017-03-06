@@ -54,9 +54,7 @@
 // [START write_fan_out]
 function writeData(choice) {
     console.log(choice.toString());
-    firebase.database().ref().set({
-        numNo: 1
-  });
+    firebase.database().ref().child('numNo').set(1);
 }
 
 </script>
